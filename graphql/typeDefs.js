@@ -32,9 +32,12 @@ input LoginInput {
 
 type Query {
     message(id: ID!): Message
+    user(id: ID!): User
 }
 
 type Mutation {
     createMessage(messageInput: MessageInput): Message!
+    registerUser(registerInput: RegisterInput): User
+    loginUser(loginInput: LoginInput): User
 }
 `
