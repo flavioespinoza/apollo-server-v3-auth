@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "server": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -16,6 +16,7 @@
     "dotenv": "^15.0.0",
     "graphql": "^15.7.2",
     "mongoose": "^6.0.14",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "ololog": "^1.1.175"
   }
 }

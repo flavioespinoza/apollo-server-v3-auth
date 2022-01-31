@@ -1,5 +1,6 @@
 require('dotenv').config();
 
+const log = require('ololog');
 const { ApolloServer } = require('apollo-server');
 const mongoose = require('mongoose');
 
@@ -20,5 +21,7 @@ mongoose
     return server.listen({ port: 5000 });
   })
   .then((res) => {
-    console.log(`Server running at ${res.url}`);
+    log.blue(`Server is listening on: ${res.url}`);
+  }).catch((error) => {
+    throw new Error(error);
   });

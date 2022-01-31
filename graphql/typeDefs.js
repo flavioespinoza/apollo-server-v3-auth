@@ -7,9 +7,27 @@ type Message {
     createdBy: String
 }
 
+type User {
+    username: String
+    email: String
+    password: String
+    token: String
+}
+
 input MessageInput {
     text: String
     username: String
+}
+
+input RegisterInput {
+    username: String
+    email: String
+    password: String
+}
+
+input LoginInput {
+    email: String
+    password: String
 }
 
 type Query {
