@@ -1,10 +1,12 @@
+require('dotenv').config();
+
 const { ApolloServer }  = require('apollo-server');
 const mongoose = require('mongoose');
 
 const typeDefs = require('./graphql/typeDefs');
 const resolvers = require('./graphql/resolvers');
 
-const MONGODB = "mongodb+srv://<username>:<password>@apolloserverv3auth.eiiti.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+const MONGODB = `mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@apolloserverv3auth.eiiti.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`
 
 const server = new ApolloServer({
     typeDefs,
