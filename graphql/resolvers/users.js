@@ -65,7 +65,7 @@ module.exports = {
       // check user entered password against encrypted user.password
       const isValidPassword = await bcrypt.compare(password, user.password);
 
-      // check conditional: (user and isValidPassword) then generate token
+      // if valid credentials generate token
       if (user && isValidPassword) {
         // JWT define params
         const secret = process.env.JWT_SECRET;
